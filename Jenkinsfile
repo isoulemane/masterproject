@@ -27,9 +27,9 @@ pipeline {
             }
         }
         
-        stage('CodeReview on slave2') {
+        stage('CodeReview on slave1') {
             agent {
-                label 'slave2'
+                label 'slave1'
             }
             steps {
                 echo 'Code Review...'
