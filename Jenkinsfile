@@ -29,7 +29,7 @@ pipeline {
         
         stage('CodeReview') {
             agent {
-                label 'slave1'
+                label 'slave2'
             }
             steps {
                 echo 'Code Review...'
