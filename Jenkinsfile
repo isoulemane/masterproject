@@ -13,7 +13,7 @@ pipeline {
             }
             steps {
                 echo 'Cloning...'
-                git 'https://github.com/theitern/ClassDemoProject.git'
+                git 'https://github.com/RayItern/masterproject.git'
             }
         }
         
@@ -27,9 +27,9 @@ pipeline {
             }
         }
         
-        stage('CodeReview on slave1') {
+        stage('CodeReview on slave2') {
             agent {
-                label 'slave1'
+                label 'slave2'
             }
             steps {
                 echo 'Code Review...'
