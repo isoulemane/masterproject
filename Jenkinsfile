@@ -17,7 +17,7 @@ pipeline {
             }
         }
         
-        stage('Compile on slave2') {
+        stage('Compile on slave1') {
             agent {
                 label 'slave1'
             }
@@ -27,7 +27,7 @@ pipeline {
             }
         }
         
-        stage('CodeReview on slave1') {
+        stage('CodeReview on slave2') {
             agent {
                 label 'slave2'
             }
@@ -39,7 +39,7 @@ pipeline {
         
         stage('UnitTest on slave2') {
             agent {
-                label 'slave1'
+                label 'slave2'
             }
             steps {
                 echo 'Testing...'
