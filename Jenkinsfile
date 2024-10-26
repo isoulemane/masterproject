@@ -7,7 +7,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout on master') {
+        stage('Checkout on MASTER') {
             agent {
                 label 'master'
             }
@@ -17,9 +17,9 @@ pipeline {
             }
         }
         
-        stage('Compile on slave1') {
+        stage('Compile on slave2') {
             agent {
-                label 'slave1'
+                label 'slave2'
             }
             steps {
                 echo 'Compiling...'
@@ -27,9 +27,9 @@ pipeline {
             }
         }
         
-        stage('CodeReview on slave2') {
+        stage('CodeReview on slave1') {
             agent {
-                label 'slave2'
+                label 'slave1'
             }
             steps {
                 echo 'Code Review...'
@@ -37,9 +37,9 @@ pipeline {
             }
         }
         
-        stage('UnitTest on slave2') {
+        stage('UnitTest on slave1') {
             agent {
-                label 'slave2'
+                label 'slave1'
             }
             steps {
                 echo 'Testing...'
