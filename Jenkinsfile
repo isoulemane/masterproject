@@ -17,9 +17,9 @@ pipeline {
             }
         }
         
-        stage('Compile on slave1') {
+        stage('Compile on slave2') {
             agent {
-                label 'slave1'
+                label 'slave2'
             }
             steps {
                 echo 'Compiling...'
