@@ -7,7 +7,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout on MASTER') {
+        stage('Checkout on master') {
             agent {
                 label 'master'
             }
