@@ -33,7 +33,7 @@ pipeline {
             }
             steps {
                 echo 'Code Review...'
-                sh 'mvn pmd:pmd'
+                sh 'mvn pmd pmd'
             }
         }
         
